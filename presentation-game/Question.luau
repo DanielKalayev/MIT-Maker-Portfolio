@@ -1,6 +1,5 @@
 local Question = {}
 
-
 Question.PromptType = {
 	Text = "Text",
 	Drawing = "Drawing"
