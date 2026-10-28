@@ -37,10 +37,6 @@ local arenaVFX = {}
 local battleFolder = workspace.BattleFolder
 local camObj = nil
 
---Avalancheisgood
---Pengy1119
---xryanpinkle
-
 local plrList = {}
 local charList = {}
 
