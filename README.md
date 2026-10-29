@@ -51,7 +51,7 @@ Every project's purpose, functionality, cooperative partners, and extent is expl
 * **Script Descriptions:**
   * **`GameManager.luau`:** Main game loop script. This constantly collects slides from the clients participating, and stores them in a dictionary where at the end of the round, they will be projected on a screen. Every time a player finishes a slide, it's sent to the server, put in a list, and sent to the host's screen to count their progress as it is a timed game.
   * **`GameClient.luau`:** Client side of the game. This handles the gui that the player either draws on or types on and submits it to the server. The logic for the writing/typing was omitted because it was very messy and not up to my displaying standards. However, the functionality is discussed in the SlideRoom description.
-
+  * **`Question.luau`:** This is a module script that the questions are created from (in instances). Sort of like objects, these can hold the different question types and this is included because I think it's a very clear and simple demonstration of script communication.
 
 ---
 Thank you! :)
