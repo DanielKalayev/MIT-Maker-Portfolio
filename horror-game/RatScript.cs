@@ -139,7 +139,7 @@ public class RatScript : MonoBehaviour
 
                     Vent targetVent = DecideNewVent();
 
-                    // No valid vent found — stay and wait longer
+                    //no vent
                     if (targetVent == null)
                     {
                         yield return new WaitForSeconds(5f);
@@ -150,10 +150,9 @@ public class RatScript : MonoBehaviour
                     isVenting = false;
                     transform.position = targetVent.ventSpot.position;
 
-                    // Brief pause inside the new vent before popping out
                     yield return new WaitForSeconds(1f);
 
-                    // Pop out
+                    //Pop out
                     targetVent.ToggleVent(true);
 
                     agent.enabled = true;
