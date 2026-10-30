@@ -17,7 +17,7 @@ Every project's purpose, functionality, cooperative partners, and extent is expl
 
 ## Repository Folders Explanations
 
-### 1. Penguin Bounce Simulator (`Bouncing_Penguins-game/`)
+### 1. Penguin Racing Game (`Bouncing_Penguins-game/`)
 * **Engine/Language:** Unity / C#
 * **Script Descriptions:**
   * **`GameManager.cs`:** This contains the main game loop of the project. This connects the data saving, points, spawns the map, the penguins, and handles most of the logic.
@@ -33,7 +33,7 @@ Every project's purpose, functionality, cooperative partners, and extent is expl
   * **`KeycardDppr.cs`:** The KeycardDoor script mainly focuses on handling behavior between the keycard and the door (no way). It utilizes many lerp functions to ease both the door and lights on the door. The reason why I've chosen to include this script specifically, is because it also multitasks checking room boundaries and affecting enemy AI. Based on where the player is on the map, there is a hitbox to check if the player is in the room, and relays that data to enemy ai.
   * **`PlayerMovement.cs`:** The player movement script is a combination of many edits from past unity first person projects combined into one. This is not the first time I'm using a version of this script, but it is the latest. It deals with vector calculation with speed and many different player states. This script was made in combination of tutorials, and very HEAVY modification of tutorials, as its origins were before I was fluent in C#, but I have completely modified a majority of the code to fit my coding style and needs.
 
-### 3. Custom Deltarune Roblox Demo (`deltarune/`)
+### 3. Multiplayer Deltarune Roblox Demo (`deltarune/`)
 * **Engine/Language:** Roblox Studio / Luau
 * **Script Descriptions:**
   * **`Battleserver.luau`:** Server sided script that deals with all the values, logic, and turn based actions in the battle mechanic. Its main role is to keep the battles function on the server end, and send all the clients data for each outcome.
