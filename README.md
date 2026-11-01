@@ -17,14 +17,7 @@ Every project's purpose, functionality, cooperative partners, and extent is expl
 
 ## Repository Folders Explanations
 
-### 1. Penguin Racing Game (`Bouncing_Penguins-game/`)
-* **Engine/Language:** Unity / C#
-* **Script Descriptions:**
-  * **`GameManager.cs`:** This contains the main game loop of the project. This connects the data saving, points, spawns the map, the penguins, and handles most of the logic.
-  * **`PointSystem.cs`:** While not being that technically complex, I experimented with different formulas to do a running calculation using events to get a point value for each penguin and I believe this script to be a good sample.
-  * **`SaveManager.cs`:** This is my first attempt at saving data to a local drive for a Unity game. This script contains the functionality to load and pull data from the user's Persistent Data Path.
-
-### 2. "In The Company Of Us" - Horror Game (`horror-game/`)
+### 1. "In The Company Of Us" - Horror Game (`horror-game/`)
 * **Engine/Language:** Unity / C#
 * **Script Descriptions:**
   * **`GameManager.cs`:** Like most game managers, this script controls scene changing, game states, intro and outro sequences, and moves settings between scenes. (settings do not save on the local computer)
@@ -32,6 +25,11 @@ Every project's purpose, functionality, cooperative partners, and extent is expl
   * **`RatScript.cs`:** The rat is similar to the monster, in which it has its own movement logic and behavior states. However, it also has to work with a vent script to open and close the nearby vent to go in and out of it. The vent script was omitted, as all it did was store all the vents in an array and handle opening it and closing it with lerps. 
   * **`KeycardDppr.cs`:** The KeycardDoor script mainly focuses on handling behavior between the keycard and the door (no way). It utilizes many lerp functions to ease both the door and lights on the door. The reason why I've chosen to include this script specifically, is because it also multitasks checking room boundaries and affecting enemy AI. Based on where the player is on the map, there is a hitbox to check if the player is in the room, and relays that data to enemy ai.
   * **`PlayerMovement.cs`:** The player movement script is a combination of many edits from past unity first person projects combined into one. This is not the first time I'm using a version of this script, but it is the latest. It deals with vector calculation with speed and many different player states. This script was made in combination of tutorials, and very HEAVY modification of tutorials, as its origins were before I was fluent in C#, but I have completely modified a majority of the code to fit my coding style and needs.
+
+### 2. Bezier Curve Visualizer (`bezier_curve-demo/`)
+* **Engine/Language:** Roblox Studio / Luau
+* **Script Descriptions:**
+  * **`Main.luau`:** This is a single script that functions as the demo for the visualizer. In math class, I took on a personal project (because I was intrigued) and used the vector math to make a dynamic bezier curve script. I had always used bezier curves, but finally understood them on a mathematical level to then be able to create them in another medium. I ended up showing this to the class.
 
 ### 3. Multiplayer Deltarune Roblox Demo (`deltarune/`)
 * **Engine/Language:** Roblox Studio / Luau
@@ -42,14 +40,17 @@ Every project's purpose, functionality, cooperative partners, and extent is expl
    * **`PlrTemplate.luau`:** Parent "class" of `Contestants.luau`. This functions as basic OOP, and uses metatables (a roblox feature that allows for more customizable and situational lists/tables/arrays) to mimic OOP in languages like Java, C, C#, etc.
    * **`Contestants.luau`:** Child "class" of `PlrTemplate.luau`. Same logic, but different requirements. There is another class not shown in this project (it is unfinished), requiring the use of a tiered inheritence tree.
 
-### 4. Bezier Curve Visualizer (`bezier_curve-demo/`)
-* **Engine/Language:** Roblox Studio / Luau
-* **Script Descriptions:**
-  * **`Main.luau`:** This is a single script that functions as the demo for the visualizer. In math class, I took on a personal project (because I was intrigued) and used the vector math to make a dynamic bezier curve script. I had always used bezier curves, but finally understood them on a mathematical level to then be able to create them in another medium. I ended up showing this to the class.
-
-### 5. Presentation Board Game (`presentation-game/`)
+### 4. Presentation Board Game (`presentation-game/`)
 * **Engine/Language:** Roblox Studio / Luau
 * **Script Descriptions:**
   * **`GameManager.luau`:** Main game loop script. This constantly collects slides from the clients participating, and stores them in a dictionary where at the end of the round, they will be projected on a screen. Every time a player finishes a slide, it's sent to the server, put in a list, and sent to the host's screen to count their progress as it is a timed game.
   * **`GameClient.luau`:** Client side of the game. This handles the gui that the player either draws on or types on and submits it to the server. The logic for the writing/typing was omitted because it was very messy and not up to my displaying standards. However, the functionality is discussed in the SlideRoom description.
   * **`Question.luau`:** This is a module script that the questions are created from (in instances). Sort of like objects, these can hold the different question types and this is included because I think it's a very clear and simple demonstration of script communication.
+  * **`HostLocal.luau`:** This handles what the host sees in the minigame. The idea is that the host is supposed to control the round and monitor the progress everyone makes. All of this is controlled through a UI and is made functional in the script.
+
+### 5. Penguin Racing Game (`Bouncing_Penguins-game/`)
+* **Engine/Language:** Unity / C#
+* **Script Descriptions:**
+  * **`GameManager.cs`:** This contains the main game loop of the project. This connects the data saving, points, spawns the map, the penguins, and handles most of the logic.
+  * **`PointSystem.cs`:** While not being that technically complex, I experimented with different formulas to do a running calculation using events to get a point value for each penguin and I believe this script to be a good sample.
+  * **`SaveManager.cs`:** This is my first attempt at saving data to a local drive for a Unity game. This script contains the functionality to load and pull data from the user's Persistent Data Path.
